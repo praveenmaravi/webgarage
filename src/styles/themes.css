@@ -1,0 +1,85 @@
+/* themes.css */
+
+/* Light Theme - Default */
+:root {
+  /* Colors */
+  --color-bg: #ffffff;
+  --color-bg-alt: #f9fafb;
+  --color-text-primary: #1f2937;      /* Gray-800 */
+  --color-text-secondary: #4b5563;    /* Gray-600 */
+  --color-primary: #3b82f6;           /* Blue-500 */
+  --color-primary-hover: #2563eb;     /* Blue-600 */
+  --color-accent: #fbbf24;            /* Amber-400 */
+  --color-border: #e5e7eb;            /* Gray-200 */
+
+  /* Shadows */
+  --shadow-default: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-hover: 0 4px 8px rgba(0,0,0,0.12);
+
+  /* Other */
+  --font-family-base: 'Inter', sans-serif;
+  --transition-default: 0.3s ease;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --color-bg: #121212;
+  --color-bg-alt: #1f2937;             /* Gray-800 */
+  --color-text-primary: #f9fafb;       /* Gray-50 */
+  --color-text-secondary: #d1d5db;     /* Gray-300 */
+  --color-primary: #3b82f6;            /* Blue-500 */
+  --color-primary-hover: #60a5fa;      /* Blue-400 */
+  --color-accent: #fbbf24;             /* Amber-400 */
+  --color-border: #374151;             /* Gray-700 */
+
+  --shadow-default: 0 1px 3px rgba(0,0,0,0.9);
+  --shadow-hover: 0 4px 8px rgba(0,0,0,0.8);
+
+  --font-family-base: 'Inter', sans-serif;
+  --transition-default: 0.3s ease;
+}
+
+/* Utility Classes to Use Variables */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-base);
+  transition: background-color var(--transition-default), color var(--transition-default);
+}
+
+.bg-alt {
+  background-color: var(--color-bg-alt);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.border-default {
+  border-color: var(--color-border);
+}
+
+.shadow-default {
+  box-shadow: var(--shadow-default);
+}
+
+.shadow-hover:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+  transition: background-color var(--transition-default);
+}
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+/* Accent Color Usage */
+.text-accent {
+  color: var(--color-accent);
+}
+.bg-accent {
+  background-color: var(--color-accent);
+}

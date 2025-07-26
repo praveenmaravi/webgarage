@@ -1,0 +1,90 @@
+/* Canvas background (optional override of Tailwind if needed) */
+.canvas-2d {
+    background-color: #f9fafb; /* Light gray */
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+  }
+  
+  /* Outline of selected element */
+  .element-selected {
+    border: 2px solid #3b82f6; /* Tailwind blue-500 */
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+  }
+  
+  /* Resizer handles (corners) */
+  .resizer {
+    width: 8px;
+    height: 8px;
+    background: white;
+    border: 1px solid #3b82f6;
+    position: absolute;
+    z-index: 10;
+  }
+  
+  .resizer.tl { top: -4px; left: -4px; cursor: nwse-resize; }
+  .resizer.tr { top: -4px; right: -4px; cursor: nesw-resize; }
+  .resizer.bl { bottom: -4px; left: -4px; cursor: nesw-resize; }
+  .resizer.br { bottom: -4px; right: -4px; cursor: nwse-resize; }
+  
+  /* Snap guides */
+  .snap-guide {
+    position: absolute;
+    background: rgba(255, 0, 0, 0.4);
+    z-index: 1000;
+  }
+  
+  .snap-guide.horizontal {
+    height: 1px;
+    width: 100%;
+  }
+  
+  .snap-guide.vertical {
+    width: 1px;
+    height: 100%;
+  }
+  
+  /* Hover effect on elements */
+  .element-hover:hover {
+    outline: 1px dashed rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Context menu styles */
+  .context-menu {
+    position: absolute;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 999;
+    padding: 0.5rem;
+    min-width: 160px;
+  }
+  
+  .context-menu li {
+    list-style: none;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .context-menu li:hover {
+    background: #f3f4f6; /* Tailwind gray-100 */
+  }
+  
+  /* Text element styling */
+  .text-element {
+    font-size: 16px;
+    line-height: 1.4;
+    white-space: pre-wrap;
+  }
+  
+  /* Dragging preview (ghost) */
+  .drag-preview {
+    opacity: 0.5;
+    pointer-events: none;
+    position: absolute;
+    z-index: 10000;
+  }
+  

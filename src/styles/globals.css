@@ -1,0 +1,63 @@
+/* globals.css */
+
+/* Import Tailwind base styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Reset & base */
+html, body, #__next {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Root CSS variables for light/dark theme */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1f2937; /* Tailwind gray-800 */
+  --primary-color: #3b82f6; /* Tailwind blue-500 */
+  --secondary-color: #2563eb; /* Tailwind blue-700 */
+  --accent-color: #fbbf24; /* Tailwind yellow-400 */
+  --border-color: #e5e7eb; /* Tailwind gray-200 */
+}
+
+/* Dark mode overrides - use class 'dark' on <html> or <body> */
+.dark {
+  --bg-color: #121212;
+  --text-color: #f9fafb;
+  --primary-color: #3b82f6;
+  --secondary-color: #2563eb;
+  --accent-color: #fbbf24;
+  --border-color: #374151; /* Tailwind gray-700 */
+}
+
+/* Scrollbar styling for WebKit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.3);
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+/* Text selection */
+::selection {
+  background-color: var(--primary-color);
+  color: white;
+}
